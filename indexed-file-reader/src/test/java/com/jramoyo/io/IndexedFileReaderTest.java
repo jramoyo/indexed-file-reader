@@ -33,6 +33,16 @@ public class IndexedFileReaderTest {
 	}
 
 	@Test
+	public void testClose() throws Exception {
+		try {
+			reader.close();
+			reader.head(5);
+			Assert.fail("Exception not thrown.");
+		} catch (IllegalStateException ex) {
+		}
+	}
+
+	@Test
 	public void testFind() throws Exception {
 		SortedMap<Integer, String> lines = reader.find(6, 10, ".*EVEN.*");
 		assertNotNull("Null result.", lines);

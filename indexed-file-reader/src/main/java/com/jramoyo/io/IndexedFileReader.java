@@ -18,6 +18,7 @@
  */
 package com.jramoyo.io;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -53,7 +54,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 
  * @author jramoyo
  */
-public final class IndexedFileReader {
+public final class IndexedFileReader implements Closeable {
 	// Shared across all instances
 	private static final ForkJoinPool DEFAULT_POOL = new ForkJoinPool();
 
@@ -65,6 +66,8 @@ public final class IndexedFileReader {
 	private final SortedSet<Long> index;
 
 	private final Lock lock;
+
+	private boolean isClosed = false;
 
 	/**
 	 * Creates a IndexedTextFileReader, given the <code>File</code> to read
@@ -173,6 +176,12 @@ public final class IndexedFileReader {
 		this(file, Charset.defaultCharset(), splitCount, DEFAULT_POOL);
 	}
 
+	@Override
+	public void close() throws IOException {
+		raf.close();
+		isClosed = true;
+	}
+
 	/**
 	 * Finds lines matching a given regular expression from a range of line
 	 * numbers
@@ -189,6 +198,7 @@ public final class IndexedFileReader {
 	 */
 	public SortedMap<Integer, String> find(int from, int to, String regex)
 			throws IOException {
+		assertNotClosed();
 		if (regex == null) {
 			throw new NullPointerException("Regex cannot be null!");
 		}
@@ -235,6 +245,7 @@ public final class IndexedFileReader {
 	 * @throws IOException
 	 */
 	public SortedMap<Integer, String> head(int n) throws IOException {
+		assertNotClosed();
 		if (n < 1) {
 			throw new IllegalArgumentException("Argument 'n' must"
 					+ " be greater than or equal to 1!");
@@ -258,6 +269,7 @@ public final class IndexedFileReader {
 	 */
 	public SortedMap<Integer, String> readLines(int from, int to)
 			throws IOException {
+		assertNotClosed();
 		if (from < 1) {
 			throw new IllegalArgumentException("Argument 'from' must"
 					+ " be greater than or equal to 1!");
@@ -305,6 +317,7 @@ public final class IndexedFileReader {
 	 * @throws IOException
 	 */
 	public SortedMap<Integer, String> tail(int n) throws IOException {
+		assertNotClosed();
 		if (n < 1) {
 			throw new IllegalArgumentException("Argument 'n' must"
 					+ " be greater than or equal to 1!");
@@ -313,6 +326,12 @@ public final class IndexedFileReader {
 		int from = index.size() - n;
 		int to = from + n;
 		return readLines(from, to);
+	}
+
+	private void assertNotClosed() {
+		if (isClosed) {
+			throw new IllegalStateException("Reader is closed!");
+		}
 	}
 
 	/**
