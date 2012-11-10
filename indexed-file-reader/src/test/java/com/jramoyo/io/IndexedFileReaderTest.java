@@ -90,6 +90,10 @@ public class IndexedFileReaderTest {
 		assertTrue("Incorrect value.", lines.get(5).startsWith("[5]"));
 	}
 
+	public void testGetLineCount() {
+		assertEquals("Incorrect value.", 50, reader.getLineCount());
+	}
+
 	@Test
 	public void testHead() throws Exception {
 		SortedMap<Integer, String> lines = reader.head(5);
