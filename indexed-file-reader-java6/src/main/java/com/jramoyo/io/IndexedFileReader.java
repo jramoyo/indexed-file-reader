@@ -237,6 +237,15 @@ public final class IndexedFileReader implements Closeable {
 	}
 
 	/**
+	 * Returns the number of indexed lines.
+	 * 
+	 * @return the number of indexed lines.
+	 */
+	public int getLineCount() {
+		return index.size();
+	}
+
+	/**
 	 * Reads the first n number of lines
 	 * 
 	 * @param n
@@ -425,6 +434,7 @@ public final class IndexedFileReader implements Closeable {
 					index.addAll(task1.join());
 				}
 			} catch (IOException ex) {
+				throw new FileIndexingException(file, ex);
 			}
 
 			return index;

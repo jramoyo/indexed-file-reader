@@ -1,0 +1,29 @@
+<assembly>
+	<id>bin</id>
+
+	<formats>
+		<format>zip</format>
+	</formats>
+
+	<fileSets>
+		<fileSet>
+			<directory>target</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>src/main/resources</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>**/license.txt</include>
+			</includes>
+			<excludes>
+				<exclude>_svn/</exclude>
+				<exclude>.svn/</exclude>
+			</excludes>
+			<filtered>true</filtered>
+		</fileSet>
+	</fileSets>
+</assembly>
