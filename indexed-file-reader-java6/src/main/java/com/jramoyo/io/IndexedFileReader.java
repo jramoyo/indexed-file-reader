@@ -87,7 +87,7 @@ public final class IndexedFileReader implements Closeable {
 	}
 
 	/**
-	 * Creates a IndexedFileReader
+	 * Creates a IndexedFileReader, given the <code>File</code> to read from.
 	 * <p>
 	 * The specified character set will be used and the file will not be
 	 * concurrently indexed.
@@ -104,7 +104,7 @@ public final class IndexedFileReader implements Closeable {
 	}
 
 	/**
-	 * Creates a IndexedFileReader
+	 * Creates a IndexedFileReader, given the <code>File</code> to read from.
 	 * <p>
 	 * The specified character set will be used and the file will be
 	 * concurrently split according to the specified <code>splitCount</code>.
@@ -126,7 +126,7 @@ public final class IndexedFileReader implements Closeable {
 	}
 
 	/**
-	 * Creates a IndexedFileReader
+	 * Creates a IndexedFileReader, given the <code>File</code> to read from.
 	 * <p>
 	 * The specified character set will be used and the file will be
 	 * concurrently split according to the specified <code>splitCount</code>.
