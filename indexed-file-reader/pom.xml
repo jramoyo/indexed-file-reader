@@ -12,7 +12,7 @@
 	<artifactId>indexed-file-reader</artifactId>
 	<packaging>jar</packaging>
 	<name>Indexed File Reader</name>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<description>A small library for reading character files by line number</description>
 	<url>http://code.google.com/p/indexed-file-reader/</url>
 
@@ -24,9 +24,9 @@
 	</licenses>
 
 	<scm>
-		<url>http://indexed-file-reader.googlecode.com/svn/tags/indexed-file-reader-1.0</url>
-		<connection>scm:svn:http://indexed-file-reader.googlecode.com/svn/tags/indexed-file-reader-1.0</connection>
-		<developerConnection>scm:svn:https://indexed-file-reader.googlecode.com/svn/tags/indexed-file-reader-1.0</developerConnection>
+		<url>http://indexed-file-reader.googlecode.com/svn/trunk/</url>
+		<connection>scm:svn:http://indexed-file-reader.googlecode.com/svn/trunk/</connection>
+		<developerConnection>scm:svn:https://indexed-file-reader.googlecode.com/svn/trunk/</developerConnection>
 	</scm>
 
 	<developers>
