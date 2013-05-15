@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -13,7 +12,7 @@
 	<artifactId>indexed-file-reader</artifactId>
 	<packaging>jar</packaging>
 	<name>Indexed File Reader</name>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<description>A small library for reading character files by line number</description>
 	<url>http://code.google.com/p/indexed-file-reader/</url>
 
@@ -25,9 +24,9 @@
 	</licenses>
 
 	<scm>
-		<url>http://indexed-file-reader.googlecode.com/svn/trunk/</url>
-		<connection>scm:svn:http://indexed-file-reader.googlecode.com/svn/trunk/</connection>
-		<developerConnection>scm:svn:https://indexed-file-reader.googlecode.com/svn/trunk/</developerConnection>
+		<url>http://indexed-file-reader.googlecode.com/svn/tags/indexed-file-reader-1.0</url>
+		<connection>scm:svn:http://indexed-file-reader.googlecode.com/svn/tags/indexed-file-reader-1.0</connection>
+		<developerConnection>scm:svn:https://indexed-file-reader.googlecode.com/svn/tags/indexed-file-reader-1.0</developerConnection>
 	</scm>
 
 	<developers>
