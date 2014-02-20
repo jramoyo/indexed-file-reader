@@ -7,6 +7,7 @@ package com.jramoyo.io;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNotNull;
 import static junit.framework.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.IOException;
@@ -37,7 +38,7 @@ public class IndexedFileReaderTest {
 		try {
 			reader.close();
 			reader.head(5);
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalStateException ex) {
 		}
 	}
@@ -65,19 +66,19 @@ public class IndexedFileReaderTest {
 	public void testFindIncorrectArgs() throws Exception {
 		try {
 			reader.find(0, 10, null);
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (NullPointerException ex) {
 		}
 
 		try {
 			reader.find(0, 10, ".*EVEN.*");
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalArgumentException ex) {
 		}
 
 		try {
 			reader.find(5, 4, ".*ODD.*");
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalArgumentException ex) {
 		}
 	}
@@ -143,19 +144,19 @@ public class IndexedFileReaderTest {
 	public void testReadLinesIncorrectArgs() throws Exception {
 		try {
 			reader.readLines(100, 110);
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalArgumentException ex) {
 		}
 
 		try {
 			reader.readLines(0, 10);
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalArgumentException ex) {
 		}
 
 		try {
 			reader.readLines(5, 4);
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalArgumentException ex) {
 		}
 	}
@@ -184,7 +185,7 @@ public class IndexedFileReaderTest {
 	public void testTailIncorrectArgs() throws Exception {
 		try {
 			reader.tail(0);
-			Assert.fail("Exception not thrown.");
+			fail("Exception not thrown.");
 		} catch (IllegalArgumentException ex) {
 		}
 	}
