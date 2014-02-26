@@ -1,7 +1,4 @@
 # Indexed File Reader
-A small open source Java library for reading character files by line number.
-
----
 ## Abstract
 There are cases when an application needs to read specific lines from a text file ([1](http://stackoverflow.com/questions/2312756/in-java-how-to-read-from-a-file-a-specific-line-given-the-line-number)).
 
@@ -17,7 +14,6 @@ Refer to the [Javadoc](http://indexed-file-reader.googlecode.com/svn/javadoc/ind
 
 _This library uses [Fork/Join](http://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html) and hence requires Java 7. For a limited time, a Java 6 version which uses a Fork/Join backport (`jsr166y`) is also available._
 
----
 ### Maven
 ```xml
 <dependency>
@@ -35,7 +31,6 @@ Or
 </dependency>
 ```
 
----
 ### Example
 ```java
 File file = new File("src/test/resources/file.txt");
