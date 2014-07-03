@@ -1,5 +1,6 @@
 # Indexed File Reader
 [![Build Status](https://travis-ci.org/jramoyo/indexed-file-reader.png?branch=master)](https://travis-ci.org/jramoyo/indexed-file-reader)
+[![Gittip](http://img.shields.io/gittip/jramoyo.svg)](https://www.gittip.com/jramoyo/)
 
 ## Abstract
 There are cases when an application needs to read specific lines from a text file ([1](http://stackoverflow.com/questions/2312756/in-java-how-to-read-from-a-file-a-specific-line-given-the-line-number)).
