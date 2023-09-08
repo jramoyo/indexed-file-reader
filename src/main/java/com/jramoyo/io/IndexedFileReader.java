@@ -79,7 +79,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 * 
 	 * @param file
 	 *            the <code>File</code> to read from
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public IndexedFileReader(File file) throws IOException {
 		this(file, Charset.defaultCharset(), 1, DEFAULT_POOL);
@@ -96,7 +96,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 *            the <code>File</code> to read from
 	 * @param charset
 	 *            the character set to use
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public IndexedFileReader(File file, Charset charset) throws IOException {
 		this(file, charset, 1, DEFAULT_POOL);
@@ -117,7 +117,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 * @param splitCount
 	 *            the number of times the file will be divided during concurrent
 	 *            indexing
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public IndexedFileReader(File file, Charset charset, int splitCount)
 			throws IOException {
@@ -141,7 +141,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 *            indexing
 	 * @param pool
 	 *            the pool to use when concurrently indexing the file
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public IndexedFileReader(File file, Charset charset, int splitCount,
 			ForkJoinPool pool) throws IOException {
@@ -170,7 +170,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 * @param splitCount
 	 *            the number of times the file will be divided during concurrent
 	 *            indexing
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public IndexedFileReader(File file, int splitCount) throws IOException {
 		this(file, Charset.defaultCharset(), splitCount, DEFAULT_POOL);
@@ -194,7 +194,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 *            the regular expression to match
 	 * @return a sorted map of lines matching the regular expression, having the
 	 *         line number as key and the text as value.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public SortedMap<Integer, String> find(int from, int to, String regex)
 			throws IOException {
@@ -251,7 +251,7 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	 *            the number of lines
 	 * @return a map of the first n number of lines, having the line number as
 	 *         key and the text as value.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public SortedMap<Integer, String> head(int n) throws IOException {
 		assertNotClosed();
@@ -266,15 +266,13 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	/**
 	 * Reads lines given a range of line numbers
 	 * 
-	 * @param file
-	 *            the file to read
 	 * @param from
 	 *            the starting line
 	 * @param to
 	 *            the end line
 	 * @return a sorted map of lines read, having the line number as key and the
 	 *         text as value.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public SortedMap<Integer, String> readLines(int from, int to)
 			throws IOException {
@@ -317,13 +315,11 @@ public final class IndexedFileReader implements Closeable, AutoCloseable {
 	/**
 	 * Returns the last n number of lines
 	 * 
-	 * @param file
-	 *            the file to read
 	 * @param n
 	 *            the number of lines
 	 * @return a map of the last n number of lines, having the line number as
 	 *         key and the text as value.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public SortedMap<Integer, String> tail(int n) throws IOException {
 		assertNotClosed();
