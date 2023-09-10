@@ -29,7 +29,7 @@ import java.nio.charset.Charset;
  * Extends <code>RandomAccessFile</code> to support buffered reads.
  * </p>
  * 
- * @see http://www.javaworld.com/javaworld/javatips/jw-javatip26.html
+ * XXXXXsee http://www.javaworld.com/javaworld/javatips/jw-javatip26.html
  * @author jramoyo
  */
 public class BufferedRandomAccessFile extends RandomAccessFile {
@@ -49,7 +49,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 *            the file object
 	 * @param mode
 	 *            the access mode
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public BufferedRandomAccessFile(File file, String mode) throws IOException {
 		this(file, mode, DEFAULT_BUFFER_SIZE);
@@ -64,7 +64,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 *            the access mode
 	 * @param bufferSize
 	 *            the size of the read buffer
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public BufferedRandomAccessFile(File file, String mode, int bufferSize)
 			throws IOException {
@@ -81,7 +81,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 *            the path to the file
 	 * @param mode
 	 *            the access mode
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public BufferedRandomAccessFile(String filename, String mode)
 			throws IOException {
@@ -97,7 +97,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 *            the access mode
 	 * @param bufsize
 	 *            the size of the read buffer
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public BufferedRandomAccessFile(String filename, String mode, int bufsize)
 			throws IOException {
@@ -136,7 +136,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 * 
 	 * @return the next line of text from this file, or null if end of file is
 	 *         encountered before even one byte is read.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public final String getNextLine() throws IOException {
 		return getNextLine(Charset.defaultCharset());
@@ -162,7 +162,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 *            the character set to use when reading the line
 	 * @return the next line of text from this file, or null if end of file is
 	 *         encountered before even one byte is read.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	public final String getNextLine(Charset charset) throws IOException {
 		String str = null;
@@ -225,7 +225,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 * 
 	 * @return the next byte of data, or -1 if the end of the file has been
 	 *         reached.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	@Override
 	public final int read() throws IOException {
@@ -258,7 +258,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 *            the start offset in array b at which the data is written.
 	 * @param len
 	 *            the maximum number of bytes read.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	@Override
 	public int read(byte b[], int off, int len) throws IOException {
@@ -296,7 +296,7 @@ public class BufferedRandomAccessFile extends RandomAccessFile {
 	 * @param pos
 	 *            the offset position, measured in bytes from the beginning of
 	 *            the file, at which to set the file pointer.
-	 * @throws IOException
+	 * @throws IOException TODO: put description here
 	 */
 	@Override
 	public void seek(long pos) throws IOException {
